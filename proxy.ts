@@ -12,7 +12,7 @@ function getUserFromCookie(request: NextRequest) {
   }
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   const response = NextResponse.next();
 
