@@ -39,35 +39,35 @@ export default async function EventDetailPage({ params }: Props) {
 
         <div className="detail-content card">
           <div className="pill-row">
-            <span className="pill">{event.category?.name ?? 'Óflokkað'}</span>
+            <span className="pill">{event.category?.name ?? 'Ã“flokkaÃ°'}</span>
             <span className={`pill ${event.isOpen ? 'pill-open' : 'pill-closed'}`}>
-              {event.isOpen ? 'Opið fyrir skráningu' : 'Lokað'}
+              {event.isOpen ? 'OpiÃ° fyrir skrÃ¡ningu' : 'LokaÃ°'}
             </span>
           </div>
 
           <h1>{event.title}</h1>
           <p className="muted-text">{formatDate(event.eventDate)}</p>
 
-          <p>{event.description || 'Engin lýsing tiltæk fyrir þennan viðburð.'}</p>
+          <p>{event.description || 'Engin lÃ½sing tiltÃ¦k fyrir Ã¾ennan viÃ°burÃ°.'}</p>
 
           <div className="detail-list">
             <div>
-              <strong>Lið:</strong> {event.team?.name ?? 'Óþekkt'}
+              <strong>LiÃ°:</strong> {event.team?.name ?? 'Ã“Ã¾ekkt'}
             </div>
             <div>
-              <strong>Völlur:</strong> {event.venue?.name ?? 'Óþekktur'}
+              <strong>VÃ¶llur:</strong> {event.venue?.name ?? 'Ã“Ã¾ekktur'}
             </div>
             <div>
-              <strong>Borg:</strong> {event.venue?.city ?? 'Óþekkt'}
+              <strong>Borg:</strong> {event.venue?.city ?? 'Ã“Ã¾ekkt'}
             </div>
             <div>
-              <strong>Hámarksfjöldi:</strong> {event.maxParticipants ?? 'Ekki skilgreint'}
+              <strong>HÃ¡marksfjÃ¶ldi:</strong> {event.maxParticipants ?? 'Ekki skilgreint'}
             </div>
             <div>
-              <strong>Skráningar:</strong> {event.registrations?.length ?? 0}
+              <strong>SkrÃ¡ningar:</strong> {event.registrations?.length ?? 0}
             </div>
             <div>
-              <strong>Stofnað af:</strong> {event.createdBy?.username ?? 'Óþekktur notandi'}
+              <strong>StofnaÃ° af:</strong> {event.createdBy?.username ?? 'Ã“Ã¾ekktur notandi'}
             </div>
           </div>
         </div>
